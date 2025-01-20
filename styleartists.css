@@ -231,3 +231,213 @@ h6{
    width: 640px;
    height: auto;
  }
+
+ @media (max-width: 480px){
+   body{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+  }
+  
+   .logo {
+      z-index: 1;
+      text-align: center;
+      position: relative;
+      top: 5px;
+      left: 165px;
+      width: 80px;
+      height: 80px;
+      place-items: center;
+   }
+
+  
+   #p01 {
+      color: yellow;
+      font-family: Broadway;
+      font-size: 20px;
+      position: absolute;
+      top: 60px;
+      left: 45px;
+      padding: 10px;
+      border: none;
+      text-decoration: none;
+      background: rgb(219, 252, 6);
+      border-radius: 100px;
+      color: rgb(13, 12, 12);
+      cursor: pointer;
+      transition: 150ms ease;
+   }
+   #p01:hover{
+     color: white;
+  background-color: gold;
+  scale: 1.2;
+   }
+  
+   #p02 {
+      color: yellow;
+      font-family: Broadway;
+      font-size: 20px;
+      position: absolute;
+      top: 120px;
+      left: 75px;
+      padding: 10px;
+      border: none;
+      text-decoration: none;
+      background: rgb(219, 252, 6);
+      border-radius: 100px;
+      color: rgb(13, 12, 12);
+      cursor: pointer;
+      transition: 150ms ease;
+   }
+   #p02:hover{
+     color: white;
+  background-color: gold;
+  scale: 1.2;
+   }
+   
+   #p03 {
+      color: yellow;
+      font-family: Broadway;
+      font-size: 20px;
+      position: absolute;
+      top: 60px;
+      left: 260px;
+      padding: 10px;
+      border: none;
+      text-decoration: none;
+      text-align: center;
+      background: rgb(219, 252, 6);
+      border-radius: 100px;
+      color: rgb(13, 12, 12);
+      cursor: pointer;
+      transition: 150ms ease;
+   }
+   #p03:hover{
+     color: white;
+  background-color: gold;
+  scale: 1.2;
+   }
+  
+   #p04 {
+      color: yellow;
+      font-family: Broadway;
+      font-size: 20px;
+      position: absolute;
+      top: 120px;
+      left: 225px;
+      padding: 10px;
+      border: none;
+      text-decoration: none;
+      background: rgb(219, 252, 6);
+      border-radius: 100px;
+      color: rgb(13, 12, 12);
+   }
+   
+   .rectangle {
+          width: 412px;
+          height: 10px;
+          background-color: #FFD700;
+          font-size: 50px;
+          font-weight: bold;
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+          position: relative;
+          top: -45px;
+          left: -8px;
+        
+  }
+
+  h6{
+   font-family: Broadway;
+    font-size: 26px;
+    color: gold;
+    text-align: center;
+    position: absolute;
+    top: 180px;
+    left: 130px;
+
+}
+
+
+.DJ,
+.Singer,
+.MC{
+   text-align: center;
+   font-family: Broadway;
+   font-size: 30px;
+   margin: 30px;
+   color: gold;
+   position: relative;
+   top: 190px;
+   left: 10px;
+}
+
+#DJ,
+#Singer,
+#MC{
+   font-family: Federo;
+   font-size: 24px;
+}
+
+#DJ{
+   position: absolute;
+   top: 600px;
+   left: 160px;
+   transform: translateX(-45%);
+   width: 80%;
+   padding: 10px;
+   text-align: start;
+}
+
+#Singer{
+   position: absolute;
+   top: 1460px;
+   left: 180px;
+   transform: translateX(-45%);
+   width: 80%;
+   padding: 10px;
+   text-align: start;
+}
+
+#MC{
+   position: absolute;
+   top: 2280px;
+   left: 160px;
+   transform: translateX(-45%);
+   width: 80%;
+   padding: 10px;
+   text-align: start;
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+
+ .image img {
+   position: relative;
+   top: 240px;
+   left: 20px;
+   width: 90%;
+   height: auto;
+ }
+
+ .image1 img {
+   position: relative;
+   top: 550px;
+   left: 20px;
+   width: 90%;
+   height: auto;
+ }
+ 
+ .image2 img {
+   position: relative;
+   top: 1140px;
+   left: 20px;
+   width: 90%;
+   height: auto;
+ }
+
+
+}
