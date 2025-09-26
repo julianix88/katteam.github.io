@@ -196,7 +196,7 @@ scale: 1.2;
       object-fit: cover;
    }
   
-   .logo {
+  .logo {
       z-index: 1;
       text-align: center;
       position: relative;
@@ -348,21 +348,36 @@ scale: 1.2;
   scale: 1.2;
    }
    
-   .rectangle {
-          width: 410px;
-          height: 10px;
-          background-color: #FFD700;
-          font-size: 50px;
-          font-weight: bold;
-          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-          position: relative;
-          top: -90px;
-        
+  .rectangle {
+         width: 100%;
+         height: 70px; /* bigger yellow bar on mobile */
+         background-color: #FFD700;
+         font-size: 50px;
+         font-weight: bold;
+         text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+         position: relative;
+         top: -70px; /* align under video */
+         z-index: 0;
   }
+
+  /* Place links inside the yellow bar: two left of logo, two right */
+  #p01, #p02, #p03, #p04 {
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 100px;
+      position: absolute;
+      top: 10px; /* within the yellow bar */
+      z-index: 1; /* above the bar */
+  }
+  /* Left side of logo */
+  #p01 { left: 12px; }
+  #p02 { left: 110px; }
+  /* Right side of logo (logo is ~160px from left, width 80 => center ~200px) */
+  #p03 { left: 260px; }
+  #p04 { left: 350px; }
   
 
 }
-
 
 
 
