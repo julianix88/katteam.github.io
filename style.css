@@ -197,13 +197,13 @@ scale: 1.2;
    }
   
   .logo {
-      z-index: 1;
-      text-align: center;
-      position: relative;
-      top: -40px;
-      left: 160px;
+      position: absolute;
+      top: -60px; /* inside yellow bar */
+      left: 50%;
+      transform: translateX(-50%);
       width: 80px;
       height: 80px;
+      z-index: 2;
    }
   
    body {
@@ -350,14 +350,14 @@ scale: 1.2;
    
   .rectangle {
          width: 100%;
-         height: 70px; /* bigger yellow bar on mobile */
+         height: 90px; /* taller yellow bar on mobile */
          background-color: #FFD700;
          font-size: 50px;
          font-weight: bold;
          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
          position: relative;
          top: -70px; /* align under video */
-         z-index: 0;
+         z-index: 1;
   }
 
   /* Place links inside the yellow bar: two left of logo, two right */
@@ -366,19 +366,18 @@ scale: 1.2;
       padding: 8px 12px;
       border-radius: 100px;
       position: absolute;
-      top: 10px; /* within the yellow bar */
-      z-index: 1; /* above the bar */
+      top: -50px; /* vertically within bar */
+      z-index: 3; /* above the bar and below logo */
   }
   /* Left side of logo */
-  #p01 { left: 12px; }
-  #p02 { left: 110px; }
-  /* Right side of logo (logo is ~160px from left, width 80 => center ~200px) */
-  #p03 { left: 260px; }
-  #p04 { left: 350px; }
+  #p01 { left: 8%; }
+  #p02 { left: 26%; }
+  /* Right side of logo */
+  #p03 { left: 60%; }
+  #p04 { left: 78%; }
   
 
 }
-
 
 
 
