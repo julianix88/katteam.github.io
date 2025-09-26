@@ -1,113 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kat Team Events</title>
-
-  <!-- Existing site styles (leave these as-is) -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- If you load other CSS files on the home page, keep their <link> tags too -->
-
-  <!-- Minimal, safe overrides to prevent overlap -->
-  <style>
-    :root { --header-height: 72px; }
-
-    /* Keep header above content and visible on scroll */
-    .site-header {
-      position: sticky !important;
-      top: 0;
-      z-index: 1000;
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    /* If any external CSS makes the header fixed, this pushes the page down safely */
-    body.has-fixed-header { padding-top: var(--header-height); }
-
-    /* Layout helpers */
-    .container { width: min(100% - 32px, 1200px); margin-inline: auto; }
-    .navbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #111827; text-decoration: none; }
-    .brand img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
-    .nav-links { display: flex; gap: 16px; }
-    .nav-links a { color: #111827; text-decoration: none; padding: 6px 8px; border-radius: 6px; }
-    .nav-links a:hover { background: #f3f4f6; }
-
-    /* Hero video is responsive and never overlaps header */
-    .hero { background: #000; }
-    .hero .media-wrap { aspect-ratio: 16 / 9; max-height: 80vh; overflow: hidden; }
-    .hero video {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Content spacing */
-    .section { padding: 32px 0; }
-    .stack > * + * { margin-top: 16px; }
-
-    /* Basic responsive tweak for very small screens */
-    @media (max-width: 480px) {
-      .nav-links { gap: 10px; }
-      :root { --header-height: 64px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kat Team Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Federo&family=Monoton&display=swap" rel="stylesheet">
+    <style>
+        /* Minimal layout to meet the requested look while keeping names/text */
+        .hero { position: relative; background: #000; }
+        .hero .video01 { display: block; width: 100%; height: auto; object-fit: cover; }
+        /* Place the logo so its upper half is in front of the video */
+        .logo {
+            position: absolute; left: 50%; bottom: -100px; transform: translateX(-50%);
+            z-index: 2; width: 200px; height: 200px; border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+        .menu-bar { position: relative; z-index: 1; padding-top: 120px; }
+        .menu { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; padding: 16px; }
+        .menu a { text-decoration: none; }
+        .content { max-width: 1100px; margin: 0 auto; padding: 16px; }
+        #intro { text-align: center; }
+    </style>
+    
+    
 </head>
-
-<!-- Keep this class to be safe even if other CSS fixes the header -->
-<body class="has-fixed-header">
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="index.html">
-        <img src="Kat logo.jpg" alt="Kat Team Events logo" />
-        <span>Kat Team Events</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="aboutus.html">About</a>
-        <a href="artists.html">Artists</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO VIDEO: replace the file name with your actual video in /video -->
+<body>
+    <!-- Video on top -->
     <section class="hero">
-      <div class="media-wrap">
-        <video class="hero-video" autoplay muted loop playsinline>
-          <source src="video/Promo.mp4" type="video/mp4" />
-          <!-- Optional: add a poster for quick first paint -->
-          <!-- poster="images/your-poster.jpg" -->
-          Your browser does not support the video tag.
-        </video>
-      </div>
+        <video autoplay muted src="/video/Promo.mp4" width="950" height="300" class="video01"></video>
+        <img src="images/Kat logo.jpg" width="200" height="200" class="logo" alt="Kat Team Events logo">
     </section>
 
-    <!-- Example welcome/content section (keep or replace with your existing content) -->
-    <section class="section">
-      <div class="container stack">
-        <h1>Experience Unforgettable Events</h1>
-        <p>Professional DJs, MCs, singers, lighting and full entertainment services for weddings, parties, and corporate events.</p>
-        <p><a href="contact.html">Book your event</a> · <a href="gallery.html">View our gallery</a></p>
-      </div>
-    </section>
-
-    <!-- If you have more sections on your current home page, keep them below -->
-  </main>
-
-  <footer class="section" role="contentinfo">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Kat Team Events</p>
+    <!-- Menu bar below the video; logo overlaps with upper half in front of video -->
+    <div class="menu-bar">
+        <div class="rectangle"></div>
+        <div class="rectangle1"></div>
+        <nav class="menu" aria-label="Main menu">
+            <a id="p01" href="artists.html" target="_self"><big>Artists</big></a>
+            <a id="p02" href="gallery.html" target="_self"><big>Gallery</big></a>
+            <a id="p03" href="aboutus.html" target="_self"><big>About Us</big></a>
+            <a id="p04" href="contact.html" target="_self"><big>Contact</big></a>
+        </nav>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <main class="content">
+        <h2 class="gradiant">KAT TEAM EVENTS</h2>
+        <p id="intro">
+            We are delighted that you chose to know us and see if we are the perfect fit for those special event!
+            Please, feel free to browse our web page and see if we are the perfect choice for your special event, then, all you have to do is get in touch with us and, together, organise and manage all the small details for that exceptional final day!
+        </p>
+    </main>
+
 </body>
 </html>
+
