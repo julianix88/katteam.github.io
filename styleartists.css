@@ -438,6 +438,43 @@ h6{
    width: 90%;
    height: auto;
  }
+     @media (max-width: 480px){
+  .rectangle {
+    position: relative !important;
+    width: 100% !important;
+    height: 90px !important;     /* bar height */
+    left: 0 !important;
+    z-index: 1 !important;
+  }
+
+  .logo {
+    position: absolute !important;
+    top: -50px !important;        /* vertical align inside bar */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 80px !important;
+    height: 80px !important;
+    z-index: 2 !important;
+  }
+
+  /* Links inside the yellow bar */
+  #p01, #p02, #p03, #p04 {
+    position: absolute !important;
+    top: -40px !important;        /* vertical align inside bar */
+    font-size: 16px !important;
+    padding: 8px 12px !important;
+    border-radius: 100px !important;
+    z-index: 3 !important;
+  }
+
+  /* Left of logo */
+  #p01 { left: 8%  !important; }
+  #p02 { left: 26% !important; }
+  /* Right of logo */
+  #p03 { left: 60% !important; }
+  #p04 { left: 78% !important; }
+}
 
 
 }
+
