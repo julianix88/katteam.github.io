@@ -6,51 +6,47 @@
     <title>Kat Team Events</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Federo&family=Monoton&display=swap" rel="stylesheet">
-    <style>
-        /* Minimal layout to meet the requested look while keeping names/text */
-        .hero { position: relative; background: #000; }
-        .hero .video01 { display: block; width: 100%; height: auto; object-fit: cover; }
-        /* Place the logo so its upper half is in front of the video */
-        .logo {
-            position: absolute; left: 50%; bottom: -100px; transform: translateX(-50%);
-            z-index: 2; width: 200px; height: 200px; border-radius: 50%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        }
-        .menu-bar { position: relative; z-index: 1; padding-top: 120px; }
-        .menu { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; padding: 16px; }
-        .menu a { text-decoration: none; }
-        .content { max-width: 1100px; margin: 0 auto; padding: 16px; }
-        #intro { text-align: center; }
-    </style>
     
     
 </head>
 <body>
-    <!-- Video on top -->
-    <section class="hero">
-        <video autoplay muted src="/video/Promo.mp4" width="950" height="300" class="video01"></video>
-        <img src="images/Kat logo.jpg" width="200" height="200" class="logo" alt="Kat Team Events logo">
-    </section>
+    <!-- Video and logo on top, preserving all existing classes/IDs and styles -->
+    <video autoplay muted src="/video/Promo.mp4" width="950" height="300" class="video01"></video>
+    <img src="images/Kat logo.jpg" width="200" height="200" class="logo" alt="Kat Team Events logo">
 
-    <!-- Menu bar below the video; logo overlaps with upper half in front of video -->
-    <div class="menu-bar">
-        <div class="rectangle"></div>
-        <div class="rectangle1"></div>
-        <nav class="menu" aria-label="Main menu">
-            <a id="p01" href="artists.html" target="_self"><big>Artists</big></a>
-            <a id="p02" href="gallery.html" target="_self"><big>Gallery</big></a>
-            <a id="p03" href="aboutus.html" target="_self"><big>About Us</big></a>
-            <a id="p04" href="contact.html" target="_self"><big>Contact</big></a>
-        </nav>
-    </div>
+    <div class="rectangle"></div>
+    <div class="rectangle1"></div>
 
-    <main class="content">
-        <h2 class="gradiant">KAT TEAM EVENTS</h2>
-        <p id="intro">
-            We are delighted that you chose to know us and see if we are the perfect fit for those special event!
-            Please, feel free to browse our web page and see if we are the perfect choice for your special event, then, all you have to do is get in touch with us and, together, organise and manage all the small details for that exceptional final day!
-        </p>
-    </main>
+    <p id="intro">
+        We are delighted that you chose to know us and see if we are the perfect fit for those special event!
+        Please, feel free to browse our web page and see if we are the perfect choice for your special event, then, all you have to do is get in touch with us and, together, organise and manage all the small details for that exceptional final day!
+    </p>
+
+    <a id="p01" href="artists.html" target="_self">
+        <big>
+            Artists
+        </big> 
+    </a>
+
+    <a id="p02" href="gallery.html" target="_self">
+        <big>
+            Gallery
+        </big> 
+    </a>
+
+    <a id="p03" href="aboutus.html" target="_self">
+        <big>
+            About Us
+        </big> 
+    </a>
+
+    <a id="p04" href="contact.html" target="_self">
+        <big>
+            Contact
+        </big> 
+    </a>
+
+    <h2 class="gradiant">KAT TEAM EVENTS</h2>
 
 </body>
 </html>
