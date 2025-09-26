@@ -335,7 +335,7 @@ scale: 1.3;
          left: 580px;
 }
 
-@media (max-width: 480px){
+media (max-width: 480px){
    body{
       margin: 0;
       padding: 0;
@@ -354,99 +354,98 @@ scale: 1.3;
    }
 
   
-   #p01 {
-      color: yellow;
-      font-family: Broadway;
-      font-size: 20px;
-      position: absolute;
-      top: 60px;
-      left: 45px;
-      padding: 10px;
-      border: none;
-      text-decoration: none;
-      background: rgb(219, 252, 6);
-      border-radius: 100px;
-      color: rgb(13, 12, 12);
-      cursor: pointer;
-      transition: 150ms ease;
-   }
+  #p01 {
+     color: yellow;
+     font-family: Broadway;
+     font-size: 16px;
+     position: absolute;
+     top: 10px; /* inside yellow bar */
+     left: 12px; /* left of logo */
+     padding: 8px 12px;
+     border: none;
+     text-decoration: none;
+     background: rgb(219, 252, 6);
+     border-radius: 100px;
+     color: rgb(13, 12, 12);
+     cursor: pointer;
+     transition: 150ms ease;
+  }
    #p01:hover{
      color: white;
   background-color: gold;
   scale: 1.2;
    }
   
-   #p02 {
-      color: yellow;
-      font-family: Broadway;
-      font-size: 20px;
-      position: absolute;
-      top: 120px;
-      left: 75px;
-      padding: 10px;
-      border: none;
-      text-decoration: none;
-      background: rgb(219, 252, 6);
-      border-radius: 100px;
-      color: rgb(13, 12, 12);
-      cursor: pointer;
-      transition: 150ms ease;
-   }
+  #p02 {
+     color: yellow;
+     font-family: Broadway;
+     font-size: 16px;
+     position: absolute;
+     top: 10px; /* inside yellow bar */
+     left: 110px; /* left of logo */
+     padding: 8px 12px;
+     border: none;
+     text-decoration: none;
+     background: rgb(219, 252, 6);
+     border-radius: 100px;
+     color: rgb(13, 12, 12);
+     cursor: pointer;
+     transition: 150ms ease;
+  }
    #p02:hover{
      color: white;
   background-color: gold;
   scale: 1.2;
    }
    
-   #p03 {
-      color: yellow;
-      font-family: Broadway;
-      font-size: 20px;
-      position: absolute;
-      top: 60px;
-      left: 260px;
-      padding: 10px;
-      border: none;
-      text-decoration: none;
-      text-align: center;
-      background: rgb(219, 252, 6);
-      border-radius: 100px;
-      color: rgb(13, 12, 12);
-      cursor: pointer;
-      transition: 150ms ease;
-   }
+  #p03 {
+     color: yellow;
+     font-family: Broadway;
+     font-size: 16px;
+     position: absolute;
+     top: 10px; /* inside yellow bar */
+     left: 260px; /* right of logo */
+     padding: 8px 12px;
+     border: none;
+     text-decoration: none;
+     text-align: center;
+     background: rgb(219, 252, 6);
+     border-radius: 100px;
+     color: rgb(13, 12, 12);
+     cursor: pointer;
+     transition: 150ms ease;
+  }
    #p03:hover{
      color: white;
   background-color: gold;
   scale: 1.2;
    }
   
-   #p04 {
-      color: yellow;
-      font-family: Broadway;
-      font-size: 20px;
-      position: absolute;
-      top: 120px;
-      left: 225px;
-      padding: 10px;
-      border: none;
-      text-decoration: none;
-      background: rgb(219, 252, 6);
-      border-radius: 100px;
-      color: rgb(13, 12, 12);
-   }
+  #p04 {
+     color: yellow;
+     font-family: Broadway;
+     font-size: 16px;
+     position: absolute;
+     top: 10px; /* inside yellow bar */
+     left: 350px; /* right of logo */
+     padding: 8px 12px;
+     border: none;
+     text-decoration: none;
+     background: rgb(219, 252, 6);
+     border-radius: 100px;
+     color: rgb(13, 12, 12);
+  }
    
-   .rectangle {
-          width: 412px;
-          height: 10px;
-          background-color: #FFD700;
-          font-size: 50px;
-          font-weight: bold;
-          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-          position: relative;
-          top: -45px;
-          left: -8px;
-        
+  .rectangle {
+         width: 100%;
+         height: 70px; /* taller yellow bar */
+         background-color: #FFD700;
+         font-size: 50px;
+         font-weight: bold;
+         text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+         position: relative;
+         top: -45px;
+         left: 0;
   }
 
   .rectangle2 {
