@@ -178,13 +178,13 @@ scale: 1.2;
      
 }
 
+/* MOBILE */
 @media (max-width: 480px){
-   body{
-      width: 100%;
-    height: 100vh;
-    margin: 0
+  body{
+     width: 100%;
+     height: 100vh;
+     margin: 0
   }
-  
   
   :root{ --video-bottom-desktop: 260px; }
   .video01 {
@@ -196,53 +196,80 @@ scale: 1.2;
       object-fit: cover;
    }
   
+  /* Yellow bar becomes a tall bar spanning full width */
+  .rectangle {
+    position: relative !important;
+    width: 100% !important;
+    height: 90px !important;          /* bar height */
+    left: 0 !important;
+    top: -60px !important;             /* sits beneath video */
+    background-color: #FFD700 !important;
+    z-index: 1 !important;
+  }
+
+  /* Logo centered inside the yellow bar */
   .logo {
-      position: absolute;
-      top: -60px; /* inside yellow bar */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 80px;
-      z-index: 2;
-   }
-  
-   body {
-      background-color: black;
-   }
-  
-   .gradiant {
-     font-family: Broadway;
-     font-size: 35px;
-     color: gold;
-     text-align: center;
-     position: relative;
-     top: -550px;
-     
+    position: absolute !important;
+    top: -50px !important;             /* vertical alignment in bar */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 80px !important;
+    height: 80px !important;
+    z-index: 2 !important;
+  }
+
+  /* Put the four links inside the yellow bar (two left, two right) */
+  #p01, #p02, #p03, #p04 {
+    position: absolute !important;
+    top: -40px !important;             /* vertical alignment in bar */
+    font-size: 16px !important;
+    padding: 8px 12px !important;
+    border-radius: 100px !important;
+    z-index: 3 !important;             /* above the bar */
+  }
+  /* Left of logo */
+  #p01 { left: 8%  !important; }
+  #p02 { left: 26% !important; }
+  /* Right of logo */
+  #p03 { left: 60% !important; }
+  #p04 { left: 78% !important; }
+
+  body {
+     background-color: black;
   }
   
   .gradiant {
-     font-weight: bold;
-     color: gold;
-     position: relative;
-     cursor: pointer;
+    font-family: Broadway;
+    font-size: 35px;
+    color: gold;
+    text-align: center;
+    position: relative;
+    top: -550px;
+  }
+  
+  .gradiant {
+    font-weight: bold;
+    color: gold;
+    position: relative;
+    cursor: pointer;
   }
   
   .gradiant::after {
-     content: 'Welcome to our world';
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     height: 3px;
-     background-color: yellow;
-     transform: scaleX(0);
-     transform-origin: bottom right;
-     transition: transform 0.3s ease-out;
+    content: 'Welcome to our world';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: yellow;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
   }
   
   .gradiant:hover::after {
-     transform: scaleX(1);
-     transform-origin: bottom left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   
   #intro{
@@ -258,165 +285,4 @@ scale: 1.2;
      margin-right: auto;
      margin-top: 160px;
   }
-  
-   #p01 {
-      color: yellow;
-      font-family: Broadway;
-      font-size: 20px;
-      position: absolute;
-      top: 190px;
-      left: 30px;
-      padding: 10px;
-      border: none;
-      text-decoration: none;
-      background: rgb(219, 252, 6);
-      border-radius: 100px;
-      color: rgb(13, 12, 12);
-      cursor: pointer;
-      transition: 150ms ease;
-   }
-   #p01:hover{
-     color: white;
-  background-color: gold;
-  scale: 1.2;
-   }
-  
-   #p02 {
-      color: yellow;
-      font-family: Broadway;
-      font-size: 20px;
-      position: absolute;
-      top: 250px;
-      left: 80px;
-      padding: 10px;
-      border: none;
-      text-decoration: none;
-      background: rgb(219, 252, 6);
-      border-radius: 100px;
-      color: rgb(13, 12, 12);
-      cursor: pointer;
-      transition: 150ms ease;
-   }
-   #p02:hover{
-     color: white;
-  background-color: gold;
-  scale: 1.2;
-   }
-   
-   #p03 {
-      color: yellow;
-      font-family: Broadway;
-      font-size: 20px;
-      position: absolute;
-      top: 190px;
-      left: 260px;
-      padding: 10px;
-      border: none;
-      text-decoration: none;
-      text-align: center;
-      background: rgb(219, 252, 6);
-      border-radius: 100px;
-      color: rgb(13, 12, 12);
-      cursor: pointer;
-      transition: 150ms ease;
-   }
-   #p03:hover{
-     color: white;
-  background-color: gold;
-  scale: 1.2;
-   }
-  
-   #p04 {
-      color: yellow;
-      font-family: Broadway;
-      font-size: 20px;
-      position: absolute;
-      top: 250px;
-      left: 210px;
-      padding: 10px;
-      border: none;
-      text-decoration: none;
-      background: rgb(219, 252, 6);
-      border-radius: 100px;
-      color: rgb(13, 12, 12);
-      cursor: pointer;
-      transition: 150ms ease;
-   }
-   #p04:hover{
-     color: white;
-  background-color: gold;
-  scale: 1.2;
-   }
-   
-  .rectangle {
-         width: 100%;
-         height: 90px; /* taller yellow bar on mobile */
-         background-color: #FFD700;
-         font-size: 50px;
-         font-weight: bold;
-         text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-         position: relative;
-         top: -70px; /* align under video */
-         z-index: 1;
-  }
-
-  /* Place links inside the yellow bar: two left of logo, two right */
-  #p01, #p02, #p03, #p04 {
-      font-size: 16px;
-      padding: 8px 12px;
-      border-radius: 100px;
-      position: absolute;
-      top: -50px; /* vertically within bar */
-      z-index: 3; /* above the bar and below logo */
-  }
-  /* Left side of logo */
-  #p01 { left: 8%; }
-  #p02 { left: 26%; }
-  /* Right side of logo */
-  #p03 { left: 60%; }
-  #p04 { left: 78%; }
-
-   @media (max-width: 480px){
-  .rectangle {
-    position: relative !important;
-    width: 100% !important;
-    height: 90px !important;     /* bar height */
-    left: 0 !important;
-    z-index: 1 !important;
-  }
-
-  .logo {
-    position: absolute !important;
-    top: -50px !important;        /* vertical align inside bar */
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 80px !important;
-    height: 80px !important;
-    z-index: 2 !important;
-  }
-
-  /* Links inside the yellow bar */
-  #p01, #p02, #p03, #p04 {
-    position: absolute !important;
-    top: -40px !important;        /* vertical align inside bar */
-    font-size: 16px !important;
-    padding: 8px 12px !important;
-    border-radius: 100px !important;
-    z-index: 3 !important;
-  }
-
-  /* Left of logo */
-  #p01 { left: 8%  !important; }
-  #p02 { left: 26% !important; }
-  /* Right of logo */
-  #p03 { left: 60% !important; }
-  #p04 { left: 78% !important; }
 }
-  
-
-}
-
-
-
-
-
