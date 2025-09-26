@@ -5,10 +5,16 @@ body{
 }
 
 
+/* Adjustable height so video bottom meets yellow line */
+:root{ --video-bottom-desktop: 320px; }
+
 .video01 {
    display: block;
    margin-left: auto;
    margin-right: auto;
+   width: 100%;
+   height: var(--video-bottom-desktop);
+   object-fit: cover;
 }
 
 .logo {
@@ -180,12 +186,14 @@ scale: 1.2;
   }
   
   
+  :root{ --video-bottom-desktop: 260px; }
   .video01 {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 400px;
-      height: auto;
+      width: 100%;
+      height: var(--video-bottom-desktop);
+      object-fit: cover;
    }
   
    .logo {
@@ -351,32 +359,6 @@ scale: 1.2;
           top: -90px;
         
   }
-   /* Prevent hero video from sitting under the menu */
-:root { --header-height: 72px; } /* adjust if your menu is taller/shorter */
-
-header, .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #ffffff; /* match your header bg */
-}
-
-/* If your header is currently fixed instead of sticky, add this class to <body> */
-body.has-fixed-header {
-  padding-top: var(--header-height);
-}
-
-/* Ensure hero video behaves responsively */
-.hero-video {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* If your first section is anchored, avoid it hiding behind sticky header on hash links */
-.first-section {
-  scroll-margin-top: var(--header-height);
-}
   
 
 }
